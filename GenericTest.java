@@ -49,9 +49,63 @@ class Person<T>
 }
 
 
+class Student extends Person
+{
+
+  public Student(String info)
+  {
+    super(info);
+  }
+  public String getInfo()
+  {
+    return super.getInfo().toString();
+	//return super.getInfo();
+  }
+  
+  public static void main(String[] args)
+  {
+    Student s = new Student("guohao");
+	System.out.println(s.getInfo());
+	
+  }
+}
 
 
 
+class Teacher extends Person<String>
+{
+
+  public Teacher(String info)
+  {
+    super(info);
+  }
+
+   /*public String getInfo()
+  {
+    return super.getInfo();
+  }
+  
+  public void setInfo(String info)
+  {
+    this.info  = info;
+  }
+  */
+
+  public static void main(String[] args)
+  {
+    Teacher p = new Teacher("guohaojava");
+	Person p1 = new Teacher("guohaoziyi");
+    System.out.println(p.getInfo());
+	System.out.println(p1.getInfo());
+  }
+}
+
+
+
+
+
+
+// son that extends father who has a constrctor should writ a constructor too!!!!!!!!!!!!!!!
 
 
 
