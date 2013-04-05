@@ -28,7 +28,7 @@ class ArgsWordsAutoBox
     Map m = new HashMap();
 	for(int i= 0;i<args.length;i++)
 	{
-	  int freq = (Integer)m.get(args[i]) == null ? 0 : (Integer)m.get(args[i]);  // notice that if null or not,or you will get NULLPOINT EXCEPTION
+	  int freq = (Integer)m.get(args[i]) == null ? 0 : (Integer)m.get(args[i]);  // notice that if null or not,or you will get NULLPOINT EXCEPTION  
 	  m.put(args[i],(freq == 0? ONE: (freq+ 1)));
 	}
 	
